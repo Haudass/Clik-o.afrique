@@ -8,12 +8,7 @@ export default function Contact() {
     besoin: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const msg = `Bonjour Clikéo, je suis ${formData.nom}.%0A%0AMon téléphone : ${formData.telephone}%0A%0AMon besoin : ${formData.besoin}`;
-    const whatsappUrl = `https://wa.me/22500000000?text=${msg}`;
-    window.open(whatsappUrl, '_blank');
-  };
+  // Le formulaire utilise maintenant formsubmit.co pour l'envoi d'email
 
   return (
     <section id="contact" className="py-24 relative bg-[#040605] border-t border-surfaceLight">
@@ -33,20 +28,23 @@ export default function Contact() {
               </div>
               <div className="flex items-center text-textSecondary">
                 <Phone className="text-primary mr-4" size={24} />
-                <span className="text-lg font-medium text-textPrimary">+225 XX XX XX XX XX</span>
+                <span className="text-lg font-medium text-textPrimary">+225 05 44 81 67 71</span>
               </div>
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-surface p-8 md:p-10 rounded-[2rem] border border-surfaceLight shadow-2xl relative">
+          <form action="https://formsubmit.co/winac07@gmail.com" method="POST" className="bg-surface p-8 md:p-10 rounded-[2rem] border border-surfaceLight shadow-2xl relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-[2rem] pointer-events-none"></div>
             
             <div className="space-y-6 relative z-10">
+              <input type="hidden" name="_subject" value="Nouvelle demande de contact - Clikéo!" />
+              <input type="hidden" name="_captcha" value="false" />
               <div>
                 <label htmlFor="nom" className="block text-sm font-medium text-textSecondary mb-2">Votre nom</label>
                 <input 
                   type="text" 
                   id="nom"
+                  name="nom"
                   required
                   value={formData.nom}
                   onChange={(e) => setFormData({...formData, nom: e.target.value})}
@@ -60,6 +58,7 @@ export default function Contact() {
                 <input 
                   type="tel" 
                   id="telephone"
+                  name="telephone"
                   required
                   value={formData.telephone}
                   onChange={(e) => setFormData({...formData, telephone: e.target.value})}
@@ -72,6 +71,7 @@ export default function Contact() {
                 <label htmlFor="besoin" className="block text-sm font-medium text-textSecondary mb-2">Votre besoin</label>
                 <textarea 
                   id="besoin"
+                  name="besoin"
                   required
                   rows={4}
                   value={formData.besoin}

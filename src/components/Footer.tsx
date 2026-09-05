@@ -1,7 +1,7 @@
 import { MessageCircle } from 'lucide-react';
 
 export default function Footer() {
-  const whatsappUrl = `https://wa.me/22500000000`;
+  const whatsappUrl = `https://wa.me/2250544816771`;
 
   return (
     <footer className="bg-[#020302] border-t border-surfaceLight pt-16 pb-8">

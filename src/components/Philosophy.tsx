@@ -14,9 +14,10 @@ export default function Philosophy() {
     
     words.forEach(word => {
       const span = document.createElement('span');
-      span.innerText = word + ' ';
+      span.innerText = word;
       span.style.opacity = '0.1';
       span.style.display = 'inline-block';
+      span.style.marginRight = '0.25em';
       textRef.current?.appendChild(span);
     });
 
