@@ -33,7 +33,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <form action="https://formsubmit.co/winac07@gmail.com" method="POST" className="bg-surface p-8 md:p-10 rounded-[2rem] border border-surfaceLight shadow-2xl relative">
+          <form action="https://formsubmit.co/winnock07@gmail.com" method="POST" className="bg-surface p-8 md:p-10 rounded-[2rem] border border-surfaceLight shadow-2xl relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-[2rem] pointer-events-none"></div>
             
             <div className="space-y-6 relative z-10">
