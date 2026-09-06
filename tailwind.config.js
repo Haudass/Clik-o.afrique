@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#070a08',
-        surface: '#111814',
-        surfaceLight: '#1b241e',
-        primary: '#10b981', // Organic green
-        accent: '#d4af37', // Luxury gold
-        textPrimary: '#f8f9fa',
-        textSecondary: '#aab2af'
+        background: '#030712', // Very deep blue/black
+        surface: '#111827', // Gray-900
+        surfaceLight: '#1f2937', // Gray-800
+        primary: '#2563eb', // Blue-600
+        accent: '#38bdf8', // Luminous light blue/cyan for CTA accents
+        textPrimary: '#f9fafb', // Gray-50
+        textSecondary: '#9ca3af' // Gray-400
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

@@ -4,9 +4,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Features from './components/Features';
+import Services from './components/Features'; // Features renamed to Services internally
 import Philosophy from './components/Philosophy';
 import Protocol from './components/Protocol';
+import Offers from './components/Offers';
+import Portfolio from './components/Portfolio';
+import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -26,14 +29,17 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <div className="noise-overlay"></div>
       <Navbar />
       <main>
         <Hero />
-        <Features />
+        <Services />
         <Philosophy />
         <Protocol />
+        <Offers />
+        <Portfolio />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />
